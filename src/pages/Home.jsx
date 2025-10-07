@@ -23,51 +23,51 @@ function Home() {
   return (
     <div className={containerClass}>
       {/* Navbar */}
-      <header className="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+      <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
         <h1 className="text-2xl font-bold text-yellow-500">uTodo</h1>
         <button
           onClick={goToApp}
-          className="bg-yellow-500 text-white px-6 py-2 rounded-xl shadow-md hover:bg-yellow-600 transition-all duration-300"
+          className="bg-yellow-500 text-white px-6 py-2 rounded-xl shadow-md hover:bg-yellow-600 transition-all duration-300 text-sm sm:text-base"
         >
           Open App
         </button>
       </header>
 
       {/* Hero Section */}
-      <main className="flex flex-col items-center justify-center text-center px-4 mt-10">
-        <h2 className="text-5xl font-extrabold mb-4 leading-tight">
+      <main className="flex flex-col items-center justify-center text-center px-4 sm:px-6 mt-10">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
           Your Productivity, <br className="hidden md:block" />
           All in One Place
         </h2>
-        <p className={`text-lg max-w-xl mb-8 ${textSecondary}`}>
+        <p className={`text-base sm:text-lg max-w-sm sm:max-w-xl mb-8 ${textSecondary}`}>
           uTodo is a modern, minimal, and blazing fast todo app. Keep track of your tasks effortlessly.
         </p>
         <button
           onClick={goToApp}
-          className="bg-yellow-500 text-white px-8 py-3 text-lg rounded-xl shadow-lg hover:bg-yellow-600 transition-all duration-300"
+          className="bg-yellow-500 text-white px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-lg rounded-xl shadow-lg hover:bg-yellow-600 transition-all duration-300"
         >
           Get Started
         </button>
       </main>
 
       {/* Features Section */}
-      <section className="mt-20 px-4 max-w-5xl mx-auto">
-        <h3 className="text-3xl font-bold mb-10 text-center">Why uTodo?</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section className="mt-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <h3 className="text-2xl sm:text-3xl font-bold mb-10 text-center">Why uTodo?</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div className={cardClass}>
-            <h4 className="text-xl font-semibold mb-2">Fast & Simple</h4>
+            <h4 className="text-lg sm:text-xl font-semibold mb-2">Fast & Simple</h4>
             <p className={`text-sm ${textSecondary}`}>
               Just open and start adding your tasks. No clutter, no distractions.
             </p>
           </div>
           <div className={cardClass}>
-            <h4 className="text-xl font-semibold mb-2">Auto Save</h4>
+            <h4 className="text-lg sm:text-xl font-semibold mb-2">Auto Save</h4>
             <p className={`text-sm ${textSecondary}`}>
               Your todos are saved in your browser automatically. Zero setup needed.
             </p>
           </div>
           <div className={cardClass}>
-            <h4 className="text-xl font-semibold mb-2">Modern Design</h4>
+            <h4 className="text-lg sm:text-xl font-semibold mb-2">Modern Design</h4>
             <p className={`text-sm ${textSecondary}`}>
               Built with TailwindCSS and React, it's smooth and responsive.
             </p>
@@ -76,7 +76,7 @@ function Home() {
       </section>
 
       {/* Footer */}
-      <footer className={`mt-20 text-center text-sm py-6 ${textSecondary}`}>
+      <footer className={`mt-20 text-center text-xs sm:text-sm py-6 px-4 ${textSecondary}`}>
         &copy; {new Date().getFullYear()} uTodo. Built with ❤️ using React + TailwindCSS.
       </footer>
     </div>

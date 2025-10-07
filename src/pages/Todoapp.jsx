@@ -63,7 +63,7 @@ function Todoapp() {
   return (
     <div className={`min-h-screen w-full transition-colors duration-500 ${pageBg}`}>
       <div className="max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold mb-6 text-center">uTodo - Manage your tasks</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-center">uTodo - Manage your tasks</h1>
 
         {/* Input Field */}
         <div className="flex flex-col sm:flex-row gap-4 mb-4">
@@ -75,7 +75,7 @@ function Todoapp() {
             onChange={(e) => setTodo(e.target.value)}
           />
           <button
-            className="bg-yellow-500 text-white px-5 py-2 rounded-md hover:bg-yellow-600 transition"
+            className="bg-yellow-500 text-white px-5 py-2 rounded-md hover:bg-yellow-600 transition text-sm sm:text-base"
             disabled={todo.trim().length < 3}
             onClick={handleSave}
           >
@@ -112,14 +112,14 @@ function Todoapp() {
                 className={`flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 rounded-xl shadow-md transition-all duration-300 ${cardBg}`}
               >
                 {/* Task and Status */}
-                <div className="flex-1 mb-2 sm:mb-0">
-                  <span className={`block ${item.isCompleted ? 'line-through opacity-60' : ''}`}>
+                <div className="flex-1 w-full sm:w-auto mb-3 sm:mb-0">
+                  <span className={`block text-base sm:text-lg break-words ${item.isCompleted ? 'line-through opacity-60' : ''}`}>
                     {item.mytodo}
                   </span>
                 </div>
 
                 {/* Actions */}
-                <div className="flex gap-2 flex-wrap justify-end">
+                <div className="flex flex-wrap gap-2 justify-end sm:justify-start w-full sm:w-auto">
                   <button
                     onClick={() => handleCompleted(item.id)}
                     className={`px-3 py-1 rounded-md text-sm font-medium transition-all duration-300 ${

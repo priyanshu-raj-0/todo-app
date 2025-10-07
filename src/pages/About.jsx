@@ -9,8 +9,8 @@ function About() {
     : 'min-h-screen bg-gradient-to-br from-yellow-50 to-white text-gray-800 font-sans px-4 py-10 transition-colors duration-500';
 
   const cardClass = darkMode
-    ? 'bg-gray-800/80 backdrop-blur-md rounded-3xl shadow-xl p-10'
-    : 'bg-white/80 backdrop-blur-md rounded-3xl shadow-xl p-10';
+    ? 'bg-gray-800/80 backdrop-blur-md rounded-3xl shadow-xl p-8 sm:p-10'
+    : 'bg-white/80 backdrop-blur-md rounded-3xl shadow-xl p-8 sm:p-10';
 
   const featureCardClass = darkMode
     ? 'p-5 bg-gray-700 rounded-xl shadow hover:shadow-md transition-all text-gray-100'
@@ -23,13 +23,13 @@ function About() {
   return (
     <div className={containerClass}>
       <div className={`max-w-4xl mx-auto ${cardClass}`}>
-        <h1 className="text-4xl font-extrabold text-yellow-500 dark:text-yellow-400 mb-6 text-center">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-yellow-500 dark:text-yellow-400 mb-6 text-center">
           About uTodo
         </h1>
 
         <p className="text-lg leading-relaxed mb-6">
           <strong>uTodo</strong> is a modern, minimal, and efficient todo application designed for simplicity and productivity.
-          It helps you keep track of your tasks with a clean interface, smooth animations, and lightning-fast performance —
+          It helps you keep track of your tasks with a clean interface, smooth animations, and lightning-fast performance — 
           all built using <span className={highlightTextClass}>React</span> and <span className={highlightTextClass}>Tailwind CSS</span>.
         </p>
 
@@ -39,7 +39,7 @@ function About() {
         </p>
 
         {/* Feature Highlights */}
-        <div className="mt-10 grid md:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className={featureCardClass}>
             <h3 className="font-semibold text-lg mb-2 text-yellow-500 dark:text-yellow-300">🧠 Simple & Intuitive</h3>
             <p className="text-sm">
